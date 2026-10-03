@@ -1,0 +1,14 @@
+#!/bin/sh
+# This repository is public, so a push publishes. Refuse one that would
+# publish anything on the maintainer's private list -- in a commit message, in
+# a line a commit adds, or in a branch name -- or a comment that cites a record
+# a reader cannot open. The list lives outside this tree;
+# scripts/public-check.mjs says why.
+#
+# Without that list only the comment check runs.
+# Deliberate exception: git push --no-verify.
+
+root=$(git rev-parse --show-toplevel) || exit 0
+node=$(command -v node) || exit 0
+
+exec "$node" "$root/scripts/public-check.mjs" --pre-push

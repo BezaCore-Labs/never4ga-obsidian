@@ -1,0 +1,29 @@
+{
+  "name": "never4ga-obsidian",
+  "version": "0.2.0",
+  "description": "Obsidian companion for Never4gA",
+  "license": "Apache-2.0",
+  "author": "Joseph Soper",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/BezaCore-Labs/never4ga-obsidian"
+  },
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc --noEmit && node esbuild.config.mjs production",
+    "dev": "node esbuild.config.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test build/tests/*.test.js",
+    "gate": "npm run typecheck && npm run test && npm run public-check && npm run build",
+    "public-check": "node scripts/public-check.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "builtin-modules": "^4.0.0",
+    "esbuild": "^0.25.0",
+    "obsidian": "^1.7.2",
+    "tslib": "^2.8.0",
+    "typescript": "^5.7.0"
+  }
+}

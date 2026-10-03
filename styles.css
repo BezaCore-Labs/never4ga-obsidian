@@ -1,0 +1,138 @@
+/* Every colour is an Obsidian theme variable: the panel belongs to whatever
+   theme the reader chose, and hard-coding one would make it the only thing in
+   the app that ignores them. */
+
+.n4g-view {
+  padding: 0 0.75rem 1rem;
+}
+
+.n4g-section {
+  margin-top: 1rem;
+}
+
+.n4g-section-title {
+  margin: 0 0 0.35rem;
+  font-size: var(--font-ui-small);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.n4g-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.15rem 0;
+  font-size: var(--font-ui-small);
+}
+
+.n4g-row-label {
+  color: var(--text-muted);
+}
+
+.n4g-row-value {
+  text-align: right;
+  word-break: break-word;
+}
+
+.n4g-note,
+.n4g-empty {
+  margin: 0.4rem 0;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.n4g-button {
+  margin: 0.35rem 0.35rem 0 0;
+}
+
+.n4g-button-active {
+  background: var(--interactive-accent);
+  color: var(--text-on-accent);
+}
+
+.n4g-link {
+  cursor: pointer;
+  color: var(--text-accent);
+  text-decoration: none;
+}
+
+.n4g-link:hover {
+  text-decoration: underline;
+}
+
+.n4g-finding,
+.n4g-pack-item,
+.n4g-work-item {
+  padding: 0.4rem 0;
+  border-bottom: 1px solid var(--background-modifier-border);
+  font-size: var(--font-ui-small);
+}
+
+.n4g-finding-rule {
+  color: var(--text-muted);
+  font-size: var(--font-ui-smaller);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.n4g-pack-head {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.n4g-pack-category,
+.n4g-pack-reference,
+.n4g-work-status {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* The acquisition reason. The inspector exists to show this, so it is never
+   truncated or hidden behind a hover. */
+.n4g-pack-reason {
+  margin-top: 0.2rem;
+  font-size: var(--font-ui-smaller);
+  color: var(--text-faint);
+  line-height: 1.35;
+}
+
+.n4g-work-item {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+}
+
+.n4g-work-id {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.n4g-work-item a {
+  flex: 1;
+}
+
+.n4g-status {
+  cursor: pointer;
+}
+
+.n4g-suggest-meta,
+.n4g-suggest-excerpt {
+  font-size: var(--font-ui-smaller);
+  color: var(--text-muted);
+}
+
+.n4g-suggest-excerpt {
+  margin-top: 0.15rem;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.n4g-suggest-stale {
+  color: var(--text-warning);
+}

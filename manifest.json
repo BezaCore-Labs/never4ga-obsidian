@@ -1,0 +1,10 @@
+{
+  "id": "never4ga-companion",
+  "name": "Never4gA Companion",
+  "version": "0.2.0",
+  "minAppVersion": "1.5.0",
+  "description": "Reads the local Never4gA service: health, search, context provenance, work items and maintenance findings. Creates and adopts concepts through the service, never by writing the vault directly.",
+  "author": "Joseph Soper",
+  "authorUrl": "https://bezacore.com",
+  "isDesktopOnly": false
+}

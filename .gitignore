@@ -1,0 +1,27 @@
+# Build output. `main.js` is a release artifact, attached to a tag rather than
+# committed: a bundle in the history makes every diff unreadable.
+main.js
+main.js.map
+*.tsbuildinfo
+
+# Compiled test output
+build/
+
+node_modules/
+
+
+# Editors
+.idea/
+.vscode/
+*.swp
+
+# OS
+.DS_Store
+
+# BEGIN never4ga agent instruction files
+# Agent instruction files are generated on each machine and never
+# committed.
+AGENTS.md
+CLAUDE.md
+GEMINI.md
+# END never4ga agent instruction files
